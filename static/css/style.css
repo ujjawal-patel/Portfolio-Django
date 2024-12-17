@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark theme */
+    color: #e2e2e2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+#navbar {
+    line-height: 4rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 1px solid #ffffff52;
+    background: linear-gradient(145deg, #1f1f38, #282852);
+    padding: 1rem;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#navbar ul li {
+    margin: 0 1rem;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #8a2be2; /* Neon accent */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.9rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #00e5ff; /* Bright hover effect */
+    transform: scale(1.1);
+    background-color: #fff;
+    border-radius: .4rem;
+}
+
+/* Home Section */
+.home-left, .home-right {
+    width: 50%;
+    padding: 5rem;
+}
+
+.home-left h6, h4 {
+    color: rgb(216, 117, 173);
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.home-left h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.4); /* Glowing effect */
+}
+
+.home-right {
+    position: relative;
+}
+
+.home-right img {
+    position: absolute;
+    width: 75%;  /* Increased width */
+    height: 75%; /* Increased height */
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Add a soft shadow for depth */
+    animation: fadeIn 1s ease-in-out 0.5s; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 0;
+    background: #1f1f38;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    max-width: 1200px; /* Increased width */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Increase width for the form */
+}
+
+.form-container h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+.input-field i {
+    color: #555;
+    margin-right: 10px;
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333;
+    font-size: 1rem;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.input-field input::placeholder,
+.input-field textarea::placeholder {
+    color: #aaa;
+}
+
+.input-field textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+    border: 1px solid #00e5ff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #007BFF;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Skills Section */
+#skills {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    background-color: #1f1f38;
+}
+
+.skills-left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-left img {
+    width: 85%;
+    border-radius: 1rem;
+}
+
+.skills-right {
+    width: 50%;
+    padding-left: 2rem;
+}
+
+.skillss-container {
+    width: 100%;
+}
+
+/* Skill Progress Bars */
+.bar {
+    width: 100%;
+    height: 1.5rem; /* Increased bar thickness */
+    margin: 1.5rem 0; /* Added more spacing between the bars */
+    border-radius: 12px;
+    position: relative;
+}
+
+.bar-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+}
+
+.left {
+    left: 10px;
+}
+
+.right-skills {
+    right: 10px;
+}
+
+/* Custom Colors for Each Skill Progress Bar */
+.java {
+    background-color: #e54c21; /* Orange for Java */
+}
+
+.html {
+    background-color: #00a0e4; /* Blue for HTML */
+}
+
+.css {
+    background-color: #f1c232; /* Yellow for CSS */
+}
+
+.js {
+    background-color: #f44336; /* Red for JavaScript */
+}
+
+.python {
+    background-color: #7952b3; /* Purple for Python */
+}
+
+.project-management {
+    background-color: #4caf50; /* Green for Project Management */
+}
+
+.android {
+    background-color: #ff5722; /* Deep Orange for Android Development */
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projects-item {
+    width: 20rem;
+    margin: 1rem;
+    background: linear-gradient(145deg, #2a2a2a, #121212); /* Gradient background */
+    border-radius: 1.5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.projects-item:hover {
+    transform: translateY(-10px); /* Hover effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+}
+
+.projects-item h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.projects-item p {
+    line-height: 20px;
+    font-size: .9rem;
+}
+
+/* Footer */
+#footer {
+    background-color: #101010; /* Dark footer */
+    padding: 1% 0;
+    color: #e2e2e2;
+}
+
+ul li {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    transition: all 0.5s;
+}
+
+ul li a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.font-awesome {
+    margin: 1.1rem auto;
+}
+
+.font-awesome li i {
+    background-color: #1f1f38;
+    padding: 0.6rem;
+    border: 1px solid #1f1f38;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.font-awesome li i:hover {
+    background: transparent;
+    color: #1f1f38;
+}
+
+#footer p {
+    font-size: .9rem;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.s-between {
+    justify-content: space-between;
+}
+
+.s-around {
+    justify-content: space-around;
+}
+
+.s-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.t-white {
+    color: #fff;
+}
+
+.bg-color {
+    background-color: #1f1f38;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.my-2 {
+    margin: 2rem 0;
+}
+
+.f-2 {
+    font-size: 2rem;
+}
+
+.m-b-1 {
+    margin-bottom: 1rem;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.h-50 {
+    height: 50vh;
+}
+
+.mx-1 {
+    margin: 0 1rem;
+}
+
+.m-top {
+    margin-top: 1rem;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.btn {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: #df77ad;
+    cursor: pointer;
+    padding: 0.75rem 1.2rem;
+    border: 1px solid #dc85a7;
+    border-radius: 0.4rem;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    color: #1f1f38;
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.live {
+    color: #1f1f38;
+    background-color: #da7fa8;
+}
